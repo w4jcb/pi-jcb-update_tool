@@ -112,6 +112,17 @@ run_bu()
 bu
 }
 
+change_desktops()
+{
+	echo "Starting alternate Desktop Manager"
+	sudo update-alternatives --config x-session-manager
+}
+
+down_load_new_desktops()
+{
+	echo "Starting Tasksel"
+	sudo tasksel
+}
 # Execution.
 
 selection="1"
@@ -130,8 +141,10 @@ Press the number of your choice:
 8 - Home Space.
 9 - Show USB.
 10 - Show OS.
-11 - System Monitor
-12 - Run BU Backup
+11 - System Monitor.
+12 - Run BU Backup.
+13 - Change Desktops.
+14 - Download New Desktops.
 0 – Exit JCB.
 
 
@@ -153,6 +166,8 @@ case $selection in
 10) show_OS;pas;clear;;
 11) show_sys_monitor;pas;clear;;
 12) run_bu;pas;clear;;
+13) change_desktops;pas;clear;;
+14) down_load_new_desktops;pas;clear;;
 0) leave;pas;clear;;
 *) echo "Not a valid choice: Please try again.";pas;clear;;
 esac
