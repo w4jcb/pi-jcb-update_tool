@@ -12,7 +12,7 @@ fi
 homedir=$1 #/home/user_name
 
 # gitfiles directory
-gitfiledir=${homedir}/Local-Repo/jcb-update_tool
+gitfiledir=${homedir}/Local-Repo/pi-jcb-update_tool
 
 # list of files/folders to symlink in ${homedir}
 files="jcb.sh"
